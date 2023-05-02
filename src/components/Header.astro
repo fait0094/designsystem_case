@@ -1,4 +1,5 @@
 ---
+import "..//styles/style.css";
 ---
 
 <header>
@@ -33,16 +34,21 @@
 
 <style>
   .menu1 {
-    /* background-color: var(--customYellow); */
-    background-color: rgb(96, 96, 96);
+    background-color: var(--lightgrey);
+    color: var(--black500);
+  }
+
+  .menu1 ul {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
   }
 
   .menu2 {
-    /* background-color: var(--yellowNav); */
-    background-color: rgb(255, 225, 0);
+    background-color: var(--yellowNav);
   }
 
   li {
-    text-decoration: none;
+    list-style: none;
   }
 </style>
