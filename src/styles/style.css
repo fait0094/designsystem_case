@@ -146,22 +146,30 @@
 }
 
 body {
+  font-family: ;
 }
 
 h1 {
-  font-size: ;
+  font-size: var(--h1OverskriftFontSize);
   font-weight: 800;
-  line-height: ;
-  margin-top: ;
-  margin-bottom: ;
 }
 
 h2 {
   font-size: var(--h2OverskriftFontSize);
-  font-weight: ;
 }
 
 h3 {
-  font-size: ;
-  font-weight: ;
+  font-size: var(--h3OverskriftFontSize);
+}
+
+h4 {
+  font-size: var(--h4OverskriftFontSize);
+}
+
+h5 {
+  font-size: var(--h5OverskriftFontSize);
+}
+
+p {
+  font-size: var(--p1FontSize);
 }
