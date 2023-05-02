@@ -1,9 +1,15 @@
 ---
 
-const { banner, h2, h3, p, pris, btn } = Astro.props;
+const { banner, h2, h3, p, pris, img } = Astro.props;
 import Button from "./Button.astro";
+import "..//styles/style.css";
+
 
 ---
+<section class="grid">
+<section>
+    <img src={img} alt="">
+</section>
 
 <section>
 <h1>{banner}</h1>
@@ -25,11 +31,12 @@ import Button from "./Button.astro";
 </div>
 
 <div>
-
   <Button variant="primary">Tilmeld dig</Button>    
   <Button variant="primary">Tilmeld dig</Button>    
-
 </div>
 </section>
+</section>
 
-<style></style>
+<style>
+
+</style>
