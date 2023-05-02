@@ -1,11 +1,24 @@
 ---
 import "..//styles/style.css";
+const { link, variant, } = Astro.props;
 ---
 
+<a href={link} data-variant={variant}>
+  <!-- indhenter indhold, imellem forms. fx Get started   -->
+  <slot />
+</a>
+
 <style>
-  /* Variants */
+  a {
+    color: rgb(227, 47, 101);
+  }
+
   [data-variant="primary"] {
-      
-    }
-  /* Sizes */
-</style>
+    background-image: linear-gradient(rgb(236, 160, 122), rgb(227, 47, 101));
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+  }
