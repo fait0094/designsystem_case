@@ -1,45 +1,81 @@
 ---
-
-const { banner, h2, h3, p, pris, img } = Astro.props;
+const { banner, h1, h2, p, pris, img } = Astro.props;
 import Button from "./Button.astro";
 import "..//styles/style.css";
-
-
 ---
+
 <section class="grid">
-<section>
-    <img src={img} alt="">
-    <img src="" alt="">
-</section>
+  <section class="grid-1">
+    <p class="banner">{banner}</p>
+    <img src="sweethome-poster.png" alt="singelview-billede" />
+  </section>
 
-<section>
-<h1>{banner}</h1>
-<h2>{h2}</h2>
-<h3>{h3}</h3>
-<p>{p}</p>
+  <section class="grid-2">
+    <h1>{h1}</h1>
+    <h2>{h2}</h2>
+    <p>{p}</p>
 
-<div>
-<div>
-    <p>Lagerstatus</p>
-    <p>Afsendelse: 1-3 hverdage</p>
-</div>
-<p>{pris}</p>
-</div>
+    <div class="grid-1-2">
+      <div>
+        <p>Lagerstatus</p>
+        <p>Afsendelse: 1-3 hverdage</p>
+      </div>
+      <p>{pris}</p>
+    </div>
 
-<div>
-    <div>Str.</div>
-    <div>Antal</div>
-</div>
+    <div class="flex-grid">
+      <div class="str">Str.</div>
+      <div class="antal">Antal</div>
+    </div>
 
-<div>
-  <Button variant="primary">Tilmeld dig</Button>    
-  <Button variant="primary">Tilmeld dig</Button>    
-</div>
-</section>
+    <div class="buttons">
+      <Button variant="card">Tilføj til kurv</Button>
+      <Button variant="card">Føj til ønskeliste</Button>
+    </div>
+  </section>
 </section>
 
 <style>
-p{
-    font-family: var(--fontFamiliesDefault);
-}
+  .grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+  }
+
+  .banner {
+    background-color: var(--customGreen);
+    color: white;
+    font-size: var(----h5OverskriftFontSize);
+  }
+
+  img {
+    display: grid;
+    justify-content: center;
+  }
+
+  .grid-1-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flex-grid {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .str {
+    border: 1px solid var(--blackBtn);
+    padding: 1rem;
+    padding-right: 6rem;
+  }
+  .antal {
+    border: 1px solid var(--blackBtn);
+    padding: 1rem;
+    padding-right: 6rem;
+  }
+
+  .buttons {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+  }
 </style>
