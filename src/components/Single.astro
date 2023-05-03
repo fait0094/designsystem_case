@@ -1,18 +1,18 @@
 ---
-const { banner, h1, h2, p, pris, img } = Astro.props;
+const { banner, h2, h3, p, pris, } = Astro.props;
 import Button from "./Button.astro";
 import "..//styles/style.css";
 ---
 
 <section class="grid">
   <section class="grid-1">
-    <p class="banner">{banner}</p>
     <img src="sweethome-poster.png" alt="singelview-billede" />
   </section>
 
   <section class="grid-2">
-    <h1>{h1}</h1>
+    <h1 class="banner">{banner}</h1>
     <h2>{h2}</h2>
+    <h3>{h3}</h3>
     <p>{p}</p>
 
     <div class="grid-1-2">
@@ -38,18 +38,14 @@ import "..//styles/style.css";
 <style>
   .grid {
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 300px 1fr 1fr;
+    gap: 3rem;
   }
 
   .banner {
     background-color: var(--customGreen);
     color: white;
     font-size: var(----h5OverskriftFontSize);
-  }
-
-  img {
-    display: grid;
-    justify-content: center;
   }
 
   .grid-1-2 {
@@ -76,6 +72,7 @@ import "..//styles/style.css";
   .buttons {
     display: grid;
     gap: 1rem;
-    justify-content: center;
+    justify-content: start;
+    margin-top: 2rem;
   }
 </style>
