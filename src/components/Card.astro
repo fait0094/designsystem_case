@@ -1,5 +1,5 @@
 ---
-const { title, description, link, imgPath, kategori, pris,imgLager, lagerstatus, afsendelse} = Astro.props;
+const { title, description, imgPath, kategori, pris,imgLager, lagerstatus, afsendelse,} = Astro.props;
 import Button from "./Button.astro";
 ---
 
@@ -26,11 +26,6 @@ import Button from "./Button.astro";
             <h2 class="pris">{pris}</h2>
         </div>
     </div>
-
-   
-   
-
-
     <div class="button">
     <Button variant="card_sek">Læg i kurv</Button> 
     </div>
@@ -38,7 +33,10 @@ import Button from "./Button.astro";
 </section>
 
 
+
 <style>
+
+
 .card{
     background-color: var(--lightgrey);
    margin: auto;
