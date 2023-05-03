@@ -6,14 +6,14 @@ import "..//styles/style.css";
   <nav class="menu1">
     <ul>
       <li><a href="#">KLUB FARAOS</a></li>
-      <li>BUTIKKER</li>
-      <li>ÅBNINGSTIDER</li>
-      <li>KALENDER</li>
-      <li>KUNDESERVICE</li>
-      <li>GAVEKORT</li>
-      <li>MIN ØNSKELISTE</li>
-      <li>LOGIN</li>
-      <li><img src="e-label.svg" alt="" /></li>
+      <li><a href="#">BUTIKKER</a></li>
+      <li><a href="#">ÅBNINGSTIDER</a></li>
+      <li><a href="#">KALENDER</a></li>
+      <li><a href="#">KUNDESERVICE</a></li>
+      <li><a href="#">GAVEKORT</a></li>
+      <li><a href="#">MIN ØNSKELISTE</a></li>
+      <li><a href="#">LOGIN</a></li>
+      <li><a href="#"><img src="e-label.svg" alt="" /></a></li>
     </ul>
   </nav>
 
@@ -22,19 +22,19 @@ import "..//styles/style.css";
       <img src="logo.png" alt="logo" />
     </div>
     <ul>
-      <li>COMICS</li>
-      <li>ANTIKVARISK</li>
-      <li>GAMES</li>
-      <li>MERCHANDISE</li>
-      <li>UDKLÆDNING</li>
-      <li>NYHEDER</li>
-      <li>TILBUD</li>
+      <li><a href="#">COMICS</a></li>
+      <li><a href="#">ANTIKVARISK</a></li>
+      <li><a href="#">GAMES</a></li>
+      <li><a href="#">MERCHANDISE</a></li>
+      <li><a href="#">UDKLÆDNING</a></li>
+      <li><a href="#">NYHEDER</a></li>
+      <li><a href="#">TILBUD</a></li>
       <!-- <li class="search-bar">
         <input type="text" placeholder="Søg varer..." />
         <img src="search-icon.svg" alt="Search icon" />
       </li> -->
       <li class="search-bar">
-        <img src="search-bar.png" alt="" />
+        <img src="search-bar.svg" alt="" />
       </li>
       <li><img src="basket.svg" alt="" /></li>
     </ul>
@@ -42,6 +42,20 @@ import "..//styles/style.css";
 </header>
 
 <style>
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .menu1 a {
+    font-size: var(--fontSize1);
+  }
+
+  .menu2 a {
+    font-size: var(--fontSize2);
+    font-weight: var(--h2OverskriftFontWeight);
+  }
+
   .menu1 {
     background-color: var(--lightgrey);
     color: var(--black500);
@@ -52,6 +66,7 @@ import "..//styles/style.css";
     display: flex;
     gap: 20px;
     justify-content: flex-end;
+    align-items: center;
   }
 
   .menu2 {
@@ -61,7 +76,7 @@ import "..//styles/style.css";
   .menu2,
   .menu2 ul {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     justify-content: ;
     align-items: center;
     justify-content: space-between;
