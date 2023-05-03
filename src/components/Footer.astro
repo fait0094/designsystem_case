@@ -4,8 +4,8 @@ import "..//styles/style.css";
 ---
 
 <footer>
-  <div class="footer-indhold">
-    <section class="section_1">
+  <section>
+    <div class="section_1">
       <div>
         <h5>BUTIKKER</h5>
         <ul>
@@ -77,9 +77,11 @@ import "..//styles/style.css";
           <li><a href="">FORLAGET FARAOS CIGARER</a></li>
         </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section_2">
+  <section>
+    <div class="section_2">
       <div>
         <h5>TILMELD DIG VORES NYHEDSBREV</h5>
         <Button variant="primary">Facebook</Button>
@@ -93,9 +95,11 @@ import "..//styles/style.css";
       </div>
 
       <div><img src="Betalingsmetoder.png" alt="" /></div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section_3">
+  <section>
+    <div class="section_3">
       <p>© Faraos Cigarer Aps</p>
 
       <div>
@@ -112,15 +116,15 @@ import "..//styles/style.css";
         <img src="email.svg" alt="" />
         <p>faraos@faraos.dk</p>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </footer>
 
 <style>
-  .footer-indhold {
+  /* .footer-indhold {
     max-width: 1200px;
     margin: auto;
-  }
+  } */
   a {
     color: var(--black500);
     text-decoration: none;
@@ -138,6 +142,8 @@ import "..//styles/style.css";
   .section_2,
   .section_3 {
     padding: var(--spacing-md);
+    max-width: 1200px;
+    margin: auto;
   }
 
   /* Section 1 */
