@@ -1,4 +1,73 @@
 ---
+const { adresse, tlf, mail, man, son, hellig, lorem } = Astro.props;
+
+import "..//styles/style.css";
 ---
 
-<style></style>
+<article>
+  <section class="card1">
+    <h3>Kontaktinformation</h3>
+    <div class="divider"></div>
+    <h4>{adresse}</h4>
+    <h4>{tlf}</h4>
+    <h4>{mail}</h4>
+  </section>
+
+  <section class="card2">
+    <h3>Åbningstider</h3>
+    <div class="divider"></div>
+    <h4>{man}</h4>
+    <h4>{son}</h4>
+    <h4>{hellig}</h4>
+  </section>
+
+  <section class="card3">
+    <h3>Find os her</h3>
+    <img src="maps.png" alt="maps-billede" />
+  </section>
+
+  <section class="card4">
+    <h3>Om comics og potter</h3>
+    <div class="divider"></div>
+    <p>{lorem}</p>
+  </section>
+
+  <section class="card5">
+    <h3>Kundeservice</h3>
+    <div class="divider"></div>
+    <p>{lorem}</p>
+  </section>
+
+  <section class="card6">
+    <h3>Køb og bytte</h3>
+    <div class="divider"></div>
+    <p>{lorem}</p>
+  </section>
+</article>
+
+<style>
+
+    article{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--spacing-lg);
+        margin:var(--spacing-lg);
+    }
+  .divider {
+    border: 1px solid var(--black400);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .card1{
+    gap: var(--spacing-lg);
+  }
+
+  p {
+    line-height: var(--spacing-sm);
+  }
+
+  h4 {
+    margin-block:var(--spacing-xxs) ;
+  }
+
+</style>
