@@ -3,50 +3,61 @@ const { title, description, link, imgPath, kategori, pris,imgLager, lagerstatus,
 import Button from "./Button.astro";
 ---
 
-<section class="card">
-    <img src={imgPath} alt="">
-    <div class="info1">
-    <p class="card_kategori">{kategori}</p>
-    <h5 class="card_title">{title}</h3>
-    <p class="card_desription">{description}</p>
-</div>
 
-    <div class="info2">
+<section class="card">
+<div class="indhold">
+    <img src={imgPath} alt="">
+
+    <div>
+        <p class="card_kategori">{kategori}</p>
+        <h5 class="card_title">{title}</h5>
+        <p class="card_desription">{description}</p>
+    </div>
+
+    <div class="info">
+        <div class="afsend">
         <div class=lagerstatsus_card>
         <img class="lager" src={imgLager} alt="">
         <p>{lagerstatus}</p>
+        </div>
+        <p>{afsendelse}</p>
     </div>
-        <h2 class="pris">{pris}</h2>
+        <div>
+            <h2 class="pris">{pris}</h2>
+        </div>
     </div>
 
-    <p>{afsendelse}</p>
    
-    <Button variant="card_sek">Læg i kurv</Button>
-</section>
+   
 
+
+    <div class="button">
+    <Button variant="card_sek">Læg i kurv</Button> 
+    </div>
+</div>
+</section>
 
 
 <style>
 .card{
     background-color: var(--lightgrey);
+   margin: auto;
     max-width: 300px;
     padding: 10px;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
 }
 
+
+.indhold{
+    margin: auto;
+}
 img {
-    width: 90%;
-   margin: auto;
+    width: 100%;
+
 }
 
-
-.info1{
-   
-}
-
-
-
-
-.info2{
+.info{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,17 +65,22 @@ img {
 
 .lagerstatsus_card{
     display: flex;
-    justify-content: space-between;
+    
     gap: 10px;
 
 }
-
 .lager {
-width: 14px;
-
-
+width: 2vh;
 }
  
+.afsend{
+    padding-top: 20px;
+    padding-bottom: 20px;
+ 
+}
 
+.button{
+    padding-bottom: 20px;
+}
 
 </style>
