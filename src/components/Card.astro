@@ -8,9 +8,12 @@ import Button from "./Button.astro";
     <h5 class="card_kategori">{kategori}</h5>
     <h5 class="card_title">{title}</h3>
     <h5 class="card_desription">{description}</h5>
-    <h2 class="pris">{pris}</h2>
-    <img class="lager" src={imgLager} alt="">
-    <p>{lagerstatus}</p>
+    <div class="linje">
+        <img class="lager" src={imgLager} alt="">
+        <p>{lagerstatus}</p>
+        <h2 class="pris">{pris}</h2>
+    </div>
+   
     <p>{afsendelse}</p>
     <Button variant="card_sek">Læg i kurv</Button>
 </section>
@@ -22,7 +25,7 @@ import Button from "./Button.astro";
 .card{
   
     background-color: var(--lightgrey);
-    max-width: 15em;
+    max-width: 300px;
     padding: 10px;
 }
 
@@ -31,18 +34,19 @@ img {
    margin: auto;
 }
 
-.lager {
-width: 20px;
-
-}
-
-
- 
-.pris {
+.linje{
     display: flex;
-    justify-content: flex-end;
-    padding-right: 10px;
-    
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
 }
+
+.lager {
+width: 14px;
+
+
+}
+ 
+
 
 </style>
