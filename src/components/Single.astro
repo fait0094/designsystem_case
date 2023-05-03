@@ -13,7 +13,7 @@ import "..//styles/style.css";
     <h1 class="banner">{banner}</h1>
     <h2>{h2}</h2>
     <h3>{h3}</h3>
-    <p>{p}</p>
+    <p class="beskrivelse">{p}</p>
 
     <div class="grid-1-2">
       <div>
@@ -45,8 +45,9 @@ import "..//styles/style.css";
   .banner {
     background-color: var(--customGreen);
     color: white;
-    font-size: var(----h5OverskriftFontSize);
+    font-size: var(----h4OverskriftFontSize);
     padding-left: 10px;
+    margin-bottom: var(--spacing-md);
   }
 
   .grid-1-2 {
@@ -54,9 +55,17 @@ import "..//styles/style.css";
     grid-template-columns: 1fr 1fr;
   }
 
+img {
+    height:90%;
+}
   .flex-grid {
     display: flex;
     gap: 2rem;
+    margin-block: var(--spacing-sm);
+  }
+
+  .beskrivelse {
+    margin-block: var(--spacing-sm);
   }
 
   .str {
@@ -72,13 +81,12 @@ import "..//styles/style.css";
 
   .buttons {
     display: grid;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: var(--spacing-xs);
   }
 
   .pris {
-display: flex;
-justify-content: flex-end;
-font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
   }
 </style>
