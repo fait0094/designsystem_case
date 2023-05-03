@@ -1,12 +1,12 @@
 ---
-const { banner, h2, h3, p, pris, } = Astro.props;
+const { banner, h2, h3, p, pris } = Astro.props;
 import Button from "./Button.astro";
 import "..//styles/style.css";
 ---
 
 <section class="grid">
   <section class="grid-1">
-    <img src="sweethome-poster.png" alt="singelview-billede" />
+    <img src="the_void-poster.png" alt="singelview-billede" />
   </section>
 
   <section class="grid-2">
@@ -20,7 +20,7 @@ import "..//styles/style.css";
         <p>Lagerstatus</p>
         <p>Afsendelse: 1-3 hverdage</p>
       </div>
-      <p>{pris}</p>
+      <p class="pris">{pris}</p>
     </div>
 
     <div class="flex-grid">
@@ -46,6 +46,7 @@ import "..//styles/style.css";
     background-color: var(--customGreen);
     color: white;
     font-size: var(----h5OverskriftFontSize);
+    padding-left: 10px;
   }
 
   .grid-1-2 {
@@ -55,24 +56,29 @@ import "..//styles/style.css";
 
   .flex-grid {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .str {
     border: 1px solid var(--blackBtn);
     padding: 1rem;
-    padding-right: 6rem;
+    padding-inline: 7.5rem;
   }
   .antal {
     border: 1px solid var(--blackBtn);
     padding: 1rem;
-    padding-right: 6rem;
+    padding-inline: 7rem;
   }
 
   .buttons {
     display: grid;
     gap: 1rem;
-    justify-content: start;
     margin-top: 2rem;
+  }
+
+  .pris {
+display: flex;
+justify-content: flex-end;
+font-weight: bold;
   }
 </style>
