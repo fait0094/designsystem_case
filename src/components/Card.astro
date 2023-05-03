@@ -1,5 +1,48 @@
 ---
-
+const { title, description, link, imgPath, kategori, pris,imgLager, lagerstatus, afsendelse} = Astro.props;
+import Button from "./Button.astro";
 ---
 
-<style></style>
+<section class="card">
+    <img src={imgPath} alt="">
+    <h5 class="card_kategori">{kategori}</h5>
+    <h5 class="card_title">{title}</h3>
+    <h5 class="card_desription">{description}</h5>
+    <h2 class="pris">{pris}</h2>
+    <img class="lager" src={imgLager} alt="">
+    <p>{lagerstatus}</p>
+    <p>{afsendelse}</p>
+    <Button variant="card_sek">Læg i kurv</Button>
+</section>
+
+
+
+<style>
+
+.card{
+  
+    background-color: var(--lightgrey);
+    max-width: 15em;
+    padding: 10px;
+}
+
+img {
+    width: 90%;
+   margin: auto;
+}
+
+.lager {
+width: 20px;
+
+}
+
+
+ 
+.pris {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    
+}
+
+</style>
