@@ -1,11 +1,12 @@
 ---
-const { title, description, imgPath, kategori, pris,imgLager, lagerstatus, afsendelse,} = Astro.props;
+const { title, description, imgPath, kategori, pris,imgLager, lagerstatus, afsendelse, nyhedsbanner} = Astro.props;
 import Button from "./Button.astro";
 ---
 
 
 <section class="card">
 <div class="indhold">
+    <h1 class="banner">{nyhedsbanner}</h1>
     <img src={imgPath} alt="">
 
     <div>
@@ -31,9 +32,6 @@ import Button from "./Button.astro";
     </div>
 </div>
 </section>
-
-
-
 <style>
 
 
@@ -81,4 +79,11 @@ width: 2vh;
     padding-bottom: 20px;
 }
 
+.banner{
+   background-color: var(--customGreen);
+    color: white;
+    font-size: var(----h4OverskriftFontSize);
+    padding-left: 10px;
+    margin-bottom: var(--spacing-md); 
+}
 </style>
