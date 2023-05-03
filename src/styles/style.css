@@ -149,6 +149,15 @@
   --customCardGrey: #f7f7f7;
   --customGreen: #208738;
   --customRed: #cb444a;
+
+  /*spacing*/
+  --spacing-xxs:0.5rem;
+  --spacing-xs: 1rem;
+  --spacing-sm: 1.5rem;
+  --spacing-md:2rem;
+  --spacing-lg:3rem;
+  --spacing-xl:4rem;
+  --spacing-xxl:5rem;
 }
 
 body {

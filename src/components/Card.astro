@@ -5,25 +5,29 @@ import Button from "./Button.astro";
 
 <section class="card">
     <img src={imgPath} alt="">
-    <h5 class="card_kategori">{kategori}</h5>
+    <div class="info1">
+    <p class="card_kategori">{kategori}</p>
     <h5 class="card_title">{title}</h3>
-    <h5 class="card_desription">{description}</h5>
-    <div class="linje">
+    <p class="card_desription">{description}</p>
+</div>
+
+    <div class="info2">
+        <div class=lagerstatsus_card>
         <img class="lager" src={imgLager} alt="">
         <p>{lagerstatus}</p>
+    </div>
         <h2 class="pris">{pris}</h2>
     </div>
-   
+
     <p>{afsendelse}</p>
+   
     <Button variant="card_sek">Læg i kurv</Button>
 </section>
 
 
 
 <style>
-
 .card{
-  
     background-color: var(--lightgrey);
     max-width: 300px;
     padding: 10px;
@@ -34,11 +38,25 @@ img {
    margin: auto;
 }
 
-.linje{
+
+.info1{
+   
+}
+
+
+
+
+.info2{
     display: flex;
     justify-content: space-between;
-    gap: 50px;
     align-items: center;
+}
+
+.lagerstatsus_card{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
 }
 
 .lager {
