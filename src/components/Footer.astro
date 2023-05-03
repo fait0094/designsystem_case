@@ -1,13 +1,55 @@
 ---
 import Button from "./Button.astro";
+import "..//styles/style.css";
 ---
 
 <footer>
-  <section></section>
-  <Button variant="primary">Tilmeld dig</Button>
-  <Button variant="primary">Facebook</Button>
-  <Button variant="primary">Twitter</Button>
-  <Button variant="primary">Instagram</Button>
+  <section class="section_1"></section>
+
+  <section class="section_2">
+    <Button variant="primary">Tilmeld dig</Button>
+    <Button variant="primary">Facebook</Button>
+    <Button variant="primary">Twitter</Button>
+    <Button variant="primary">Instagram</Button>
+  </section>
+
+  <section class="section_3">
+    <p>© Faraos Cigarer Aps</p>
+
+    <div>
+      <img src="location.svg" alt="" />
+      <p>Skindergade 27, 1159 København K</p>
+    </div>
+
+    <div>
+      <img src="phone.svg" alt="" />
+      <p>33 32 22 11</p>
+    </div>
+
+    <div>
+      <img src="email.svg" alt="" />
+      <p>faraos@faraos.dk</p>
+    </div>
+  </section>
 </footer>
 
-<style></style>
+<style>
+  /* Section 1 */
+
+  /* Section 2 */
+
+  /* Section 3 */
+  .section_3,
+  .section_3 div {
+    display: flex;
+    background-color: black;
+    color: white;
+  }
+
+  .section_3 {
+    gap: 100px;
+  }
+  .section_3 div {
+    gap: 10px;
+  }
+</style>
