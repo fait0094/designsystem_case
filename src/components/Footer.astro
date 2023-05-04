@@ -86,19 +86,25 @@ import "..//styles/style.css";
     <div class="container">
       <div>
         <h5>TILMELD DIG VORES NYHEDSBREV</h5>
-        <img src="email-boks.svg" alt="" />
-        <Button variant="footer">Facebook</Button>
+        <div class="tilmeld">
+          <img src="email-boks.svg" alt="" />
+          <Button variant="tilmeld">TILMELD</Button>
+        </div>
       </div>
       <div><img src="Trustpilot.svg" alt="" /></div>
       <div>
         <h5>FØLG OS</h5>
 
-        <Button variant="footer">Facebook</Button>
-        <Button variant="footer">Twitter</Button>
-        <Button variant="footer">Instagram</Button>
+        <div class="socials">
+          <Button variant="footer">FACEBOOK</Button>
+          <Button variant="footer">TWITTER</Button>
+          <Button variant="footer">INSTAGRAM</Button>
+        </div>
       </div>
 
-      <div><img src="Betalingsmetoder.png" alt="" /></div>
+      <div class="betalingsmetoder">
+        <img src="betalingsmetoder.svg" alt="" />
+      </div>
     </div>
   </section>
 
@@ -144,6 +150,7 @@ import "..//styles/style.css";
   /* Section 1 */
   .section_1 {
     background-color: white;
+    padding: 30px;
   }
 
   .section_1 .container {
@@ -154,16 +161,32 @@ import "..//styles/style.css";
   /* Section 2 */
   .section_2 {
     background-color: var(--customFooterGrey);
+    padding: 30px;
   }
 
   .section_2 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    gap: 15px;
+    grid-column-gap: 10rem;
   }
 
   .section_2 div h5 {
     margin-bottom: 10px;
+  }
+
+  .betalingsmetoder {
+    align-self: end;
+  }
+
+  .tilmeld {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .socials {
+    display: flex;
   }
 
   /* Section 3 */
