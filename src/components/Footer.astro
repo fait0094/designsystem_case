@@ -5,8 +5,9 @@ import "..//styles/style.css";
 
 <footer>
   <div class="divider"></div>
-  <section>
-    <div class="section_1">
+
+  <section class="section_1">
+    <div class="container">
       <div>
         <h5>BUTIKKER</h5>
         <ul>
@@ -81,26 +82,28 @@ import "..//styles/style.css";
     </div>
   </section>
 
-  <section>
-    <div class="section_2">
+  <section class="section_2">
+    <div class="container">
       <div>
         <h5>TILMELD DIG VORES NYHEDSBREV</h5>
-        <Button variant="primary">Facebook</Button>
+        <img src="email-boks.svg" alt="" />
+        <Button variant="footer">Facebook</Button>
       </div>
       <div><img src="Trustpilot.svg" alt="" /></div>
       <div>
         <h5>FØLG OS</h5>
-        <Button variant="primary">Facebook</Button>
-        <Button variant="primary">Twitter</Button>
-        <Button variant="primary">Instagram</Button>
+
+        <Button variant="footer">Facebook</Button>
+        <Button variant="footer">Twitter</Button>
+        <Button variant="footer">Instagram</Button>
       </div>
 
       <div><img src="Betalingsmetoder.png" alt="" /></div>
     </div>
   </section>
 
-  <section>
-    <div class="section_3">
+  <section class="section_3">
+    <div class="container">
       <p>© Faraos Cigarer Aps</p>
 
       <div>
@@ -126,10 +129,6 @@ import "..//styles/style.css";
     border: 1px solid var(--black400);
     margin-bottom: var(--spacing-xs);
   }
-  /* .footer-indhold {
-    max-width: 1200px;
-    margin: auto;
-  } */
   a {
     color: var(--black500);
     text-decoration: none;
@@ -142,44 +141,58 @@ import "..//styles/style.css";
     margin-block: var(--spacing-xxs);
   }
 
-  /* Alle sections */
-  .section_1,
-  .section_2,
-  .section_3 {
-    padding: var(--spacing-md);
-    max-width: 1200px;
-    margin: auto;
-  }
-
   /* Section 1 */
   .section_1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 3rem;
     background-color: white;
+  }
+
+  .section_1 .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   /* Section 2 */
   .section_2 {
+    background-color: var(--customFooterGrey);
+  }
+
+  .section_2 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    background-color: white;
-    background-color: var(--lightgrey);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  .section_2 div h5 {
+    margin-bottom: 10px;
   }
 
   /* Section 3 */
-  .section_3,
-  .section_3 div {
-    display: flex;
-    background-color: black;
+  .section_3 {
+    background-color: var(--customBlack);
     color: white;
   }
 
-  .section_3 {
+  .section_3 .container,
+  .section_3 .container div {
+    display: flex;
+  }
+  .section_3 .container {
     gap: 100px;
   }
-  .section_3 div {
+
+  .section_3 .container div {
     gap: 10px;
+    white-space: nowrap;
+  }
+
+  /* Fælles styling */
+  section {
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 1100px;
   }
 </style>
